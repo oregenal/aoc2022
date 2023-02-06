@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-
-f = open("input.txt")
+import sys
 
 def decimal_sum(f):
     total = 0
@@ -45,6 +44,11 @@ def snafu_number(number):
         if number > -2 and number < 2: break
     return snafu
 
-number = decimal_sum(f)
-print(number)
-print(snafu_number(number))
+if __name__ == '__main__':
+    if len(sys.argv) == 2:
+        f = open(sys.argv[1])
+        number = decimal_sum(f)
+        print(number)
+        print(snafu_number(number))
+    else:
+        print("Usage: ./main.py <file_name.txt>")
