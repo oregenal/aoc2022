@@ -48,7 +48,7 @@ if __name__ == '__main__':
     if len(sys.argv) == 2:
         f = open(sys.argv[1])
         number = decimal_sum(f)
-        print(number)
-        print(snafu_number(number))
+        print("Summ = ", number)
+        print("SNAFU = ", snafu_number(number))
     else:
         print("Usage: ./main.py <file_name.txt>")
