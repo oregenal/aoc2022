@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 import sys
 
-def decimal_sum(f):
+def decimal_sum(file):
     total = 0
-    for line in f.readlines():
+    for line in file.readlines():
         result = 0
         for char in line:
             match char:
@@ -51,4 +51,4 @@ if __name__ == '__main__':
         print("Summ = ", number)
         print("SNAFU = ", snafu_number(number))
     else:
-        print("Usage: ./main.py <file_name.txt>")
+        print("Usage: " + sys.argv[0] + " <file_name.txt>")
